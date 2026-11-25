@@ -1,0 +1,272 @@
+
+/* GENERAL */
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    scroll-behavior: smooth;
+}
+
+body {
+    background: #101010;
+    color: white;
+    font-family: Arial, sans-serif;
+}
+
+/* HEADER */
+.main-header {
+    height: 80px;
+    width: 100%;
+    padding: 0 6%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    background: #101010;
+    border-bottom: 1px solid #333;
+    position: relative;
+    z-index: 10;
+}
+
+.logo {
+    color: white;
+    font-size: 25px;
+    font-weight: 900;
+    text-decoration: none;
+    letter-spacing: -1px;
+}
+
+.logo span {
+    color: #c5ff00;
+}
+
+nav {
+    display: flex;
+    gap: 30px;
+}
+
+nav a,
+.footer-links a {
+    color: white;
+    text-decoration: none;
+    font-size: 11px;
+    letter-spacing: 2px;
+    transition: 0.3s;
+}
+
+nav a:hover,
+.footer-links a:hover {
+    color: #c5ff00;
+}
+
+/* HERO SECTION */
+.hero {
+    min-height: 600px;
+    height: 80vh;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+
+    background:
+    linear-gradient(90deg,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.1)),
+    url("https://images.unsplash.com/photo-1538805060514-97d9cc17730c?w=1600")
+    center/cover;
+}
+
+.hero-content {
+    max-width: 550px;
+    animation: slideIn 1s ease;
+}
+
+.tag {
+    color: #c5ff00;
+    font-size: 11px;
+    letter-spacing: 4px;
+    margin-bottom: 20px;
+}
+
+h1 {
+    font-size: clamp(50px, 7vw, 90px);
+    line-height: 0.95;
+    font-weight: 900;
+    margin-bottom: 25px;
+}
+
+h1 span,
+h2 span {
+    color: #c5ff00;
+}
+
+.description {
+    color: #ddd;
+    line-height: 1.8;
+    max-width: 420px;
+    margin-bottom: 30px;
+}
+
+/* BUTTON */
+.btn {
+    display: inline-block;
+    padding: 16px 25px;
+    background: #c5ff00;
+    color: black;
+    text-decoration: none;
+    font-size: 11px;
+    font-weight: bold;
+    letter-spacing: 1px;
+    transition: 0.3s;
+}
+
+.btn:hover {
+    background: white;
+    transform: translateY(-5px);
+}
+
+/* SIDE LABEL */
+.side-label {
+    position: absolute;
+    right: 30px;
+    bottom: 35px;
+    color: #c5ff00;
+    font-size: 11px;
+    letter-spacing: 3px;
+    writing-mode: vertical-rl;
+}
+
+/* SHOES SECTION */
+.shoes {
+    min-height: 580px;
+    position: relative;
+    display: flex;
+    align-items: center;
+    padding: 8%;
+
+    background:
+    linear-gradient(90deg,
+    rgba(0,0,0,0.85),
+    rgba(0,0,0,0.15)),
+    url("https://images.unsplash.com/photo-1542291026-7eec264c27ff?w=1600")
+    center/cover;
+}
+
+.shoe-content {
+    max-width: 500px;
+}
+
+.shoes h2 {
+    font-size: clamp(45px, 6vw, 75px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+/* MARATHON */
+.marathon {
+    min-height: 400px;
+    padding: 90px 20px;
+    text-align: center;
+    background: #c5ff00;
+    color: black;
+}
+
+.marathon .tag {
+    color: #333;
+}
+
+.marathon h2 {
+    font-size: clamp(40px, 6vw, 70px);
+    line-height: 1;
+    margin-bottom: 25px;
+}
+
+.marathon h2 span {
+    color: #222;
+}
+
+.marathon p {
+    margin: 0 auto 30px;
+    line-height: 1.8;
+}
+
+.marathon .btn {
+    background: black;
+    color: #c5ff00;
+}
+
+/* FOOTER */
+footer {
+    min-height: 130px;
+    background: #101010;
+    padding: 35px 6%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}
+
+footer p {
+    color: #777;
+    font-size: 10px;
+    letter-spacing: 1px;
+}
+
+.footer-links {
+    display: flex;
+    gap: 20px;
+}
+
+/* ANIMATIONS */
+@keyframes slideIn {
+    from {
+        opacity: 0;
+        transform: translateY(40px);
+    }
+
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+/* MOBILE */
+@media (max-width: 650px) {
+
+    .main-header {
+        height: auto;
+        padding: 20px;
+        flex-direction: column;
+        gap: 20px;
+    }
+
+    nav {
+        gap: 13px;
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+
+    nav a {
+        font-size: 9px;
+    }
+
+    .hero {
+        min-height: 550px;
+        padding: 30px;
+    }
+
+    .shoes {
+        min-height: 500px;
+        padding: 30px;
+    }
+
+    footer {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .footer-links {
+        flex-wrap: wrap;
+        justify-content: center;
+    }
+}
